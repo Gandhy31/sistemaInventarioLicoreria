@@ -1,3 +1,15 @@
+<?php
+    include("conexion.php");
+    $conn = conectar();
+    session_start();
+    if(!isset($_SESSION['idA'])){
+      header("Location: index.php");
+    }
+    if(isset($_GET['e'])){
+      echo "<script language=\"javascript\">alert(\"Nombre de usuario o contraseña incorrectos\");</script>";
+    }
+?>
+
 <!DOCTYPE html>
 <html>
   <head>

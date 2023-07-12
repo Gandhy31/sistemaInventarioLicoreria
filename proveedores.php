@@ -321,21 +321,7 @@
                                           </td>
                                         </tr> 
                                       </tbody>
-                                    </table>
-                                    <div class="clearfix">
-                                      <div class="hint-text">Mostrando <b>5</b> fuera de <b>25</b> entradas.</div>
-                                      <ul class="pagination">
-                                        <li class="page-item disabled"><a href="#">Anterior</a></li>
-                                        <li class="page-item"><a href="#" class="page-link">1</a></li>
-                                        <li class="page-item"><a href="#" class="page-link">2</a></li>
-                                        <li class="page-item active"><a href="#" class="page-link">3</a></li>
-                                        <li class="page-item"><a href="#" class="page-link">4</a></li>
-                                        <li class="page-item"><a href="#" class="page-link">5</a></li>
-                                        <li class="page-item"><a href="#" class="page-link">Siguiente</a></li>
-                                      </ul>
-                                    </div>
-                                  </div>
-                                </div>        
+                                    </table>   
                                 </div>
                               <!-- Edit Modal HTML -->
                               <div id="addEmployeeModal" class="modal fade">

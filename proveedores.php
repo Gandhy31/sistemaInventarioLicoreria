@@ -270,10 +270,12 @@
                                           <td><?php echo $row['direccion'] ?></td>
                                           <td><?php echo $row['telefono'] ?></td>
                                           <td>
-                                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                            <a href="#editEmployeeModal<?php echo $row['id_provedores'] ?>" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                                            <a href="#deleteEmployeeModal<?php echo $row['id_provedores'] ?>" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                                           </td>
                                         </tr> 
+                                        <?php include("modal_editar_provedor.php") ?>
+                                        <?php include("modal_eliminar_provedor.php") ?>
                                         <?php
                                           }
                                         ?>
@@ -284,7 +286,7 @@
                               <div id="addEmployeeModal" class="modal fade">
                                 <div class="modal-dialog">
                                   <div class="modal-content">
-                                    <form>
+                                    <form action="agregar_provedor.php" method="POST">
                                       <div class="modal-header">						
                                         <h4 class="modal-title">Añadir Proveedor</h4>
                                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -292,20 +294,24 @@
                                       <div class="modal-body">					
                                         <div class="form-group">
                                           <label>Nombre</label>
-                                          <input type="text" class="form-control" required>
+                                          <input type="text" class="form-control" name="nombres" required>
                                         </div>
                                         <div class="form-group">
                                           <label>Email</label>
-                                          <input type="email" class="form-control" required>
+                                          <input type="email" class="form-control" name="email" required>
                                         </div>
                                         <div class="form-group">
                                           <label>Dirección</label>
-                                          <textarea class="form-control" required></textarea>
+                                          <textarea class="form-control" name="direccion" required></textarea>
                                         </div>
                                         <div class="form-group">
                                           <label>Teléfono</label>
-                                          <input type="text" class="form-control" required>
-                                        </div>					
+                                          <input type="text" name="telefono" class="form-control" required>
+                                        </div>		
+                                        <div class="form-group">
+                                          <label>RUC</label>
+                                          <input type="text" name="Ruc" class="form-control" required>
+                                        </div>				
                                       </div>
                                       <div class="modal-footer">
                                         <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
@@ -315,7 +321,7 @@
                                   </div>
                                 </div>
                               </div>
-                              <!-- Edit Modal HTML -->
+                              <!-- Edit Modal HTML 
                               <div id="editEmployeeModal" class="modal fade">
                                 <div class="modal-dialog">
                                   <div class="modal-content">
@@ -349,8 +355,8 @@
                                     </form>
                                   </div>
                                 </div>
-                              </div>
-                              <!-- Delete Modal HTML -->
+                              </div>-->
+                              <!-- Delete Modal HTML 
                               <div id="deleteEmployeeModal" class="modal fade">
                                 <div class="modal-dialog">
                                   <div class="modal-content">
@@ -370,7 +376,7 @@
                                     </form>
                                   </div>
                                 </div>
-                              </div>
+                              </div>-->
 		                          <!--Fin Contenido-->
                            </div>
                         </div>

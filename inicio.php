@@ -198,9 +198,9 @@
 	                  	<div class="col-md-4">
 		                          <!--Contenido-->
                               <div class="card" style="width: 18rem;">
-                                <img src="..." class="card-img-top" alt="...">
+                                <img src="./img/Productos.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                  <h5 class="card-title">Card title</h5>
+                                  <h5 class="card-title"><strong>Productos</strong></h5>
                                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                   <a href="#" class="btn btn-primary">Go somewhere</a>
                                 </div>
@@ -210,9 +210,9 @@
                            <div class="col-md-4">
 		                          <!--Contenido-->
                               <div class="card" style="width: 18rem;">
-                                <img src="..." class="card-img-top" alt="...">
+                                <img src="./img/CategoriaProductos.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                  <h5 class="card-title">Card title</h5>
+                                  <h5 class="card-title"><strong>Categorias</strong></h5>
                                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                   <a href="#" class="btn btn-primary">Go somewhere</a>
                                 </div>
@@ -225,7 +225,7 @@
                               <div class="card" style="width: 18rem;">
                                 <img src="..." class="card-img-top" alt="...">
                                 <div class="card-body">
-                                  <h5 class="card-title">Card title</h5>
+                                  <h5 class="card-title"><strong>Proveedores</strong></h5>
                                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                   <a href="#" class="btn btn-primary">Go somewhere</a>
                                 </div>

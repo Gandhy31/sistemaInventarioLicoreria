@@ -115,7 +115,7 @@
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="almacen/articulo"><i class="fa fa-circle-o"></i> Artículos</a></li>
+                <li><a href="productos.php"><i class="fa fa-circle-o"></i> Productos</a></li>
                 <li><a href="almacen/categoria"><i class="fa fa-circle-o"></i> Categorías</a></li>
               </ul>
             </li>
@@ -186,204 +186,53 @@
             <div class="col-md-12">
               <div class="box">
                 <div class="box-header with-border">
-                  <h3 class="box-title">Proveedores</h3>
+                  <h3 class="box-title">Gestión de Inventario Licoreria El Cuartel</h3>
                   <div class="box-tools pull-right">
-                    <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                    
+                    <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>                      
                     <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
                   </div>
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
                   	<div class="row">
-	                  	<div class="col-md-12">
+	                  	<div class="col-md-4">
 		                          <!--Contenido-->
-                              <div class="container">
-                                <div class="table-responsive">
-                                  <div class="table-wrapper">
-                                    <div class="table-title">
-                                      <div class="row">
-                                        <div class="col-xs-6">
-                                          <h2>Administrar <b>Proveedores</b></h2>
-                                        </div>
-                                        <div class="col-xs-6">
-                                          <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Añadir nuevo proveedor</span></a>
-                                          <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Borrar</span></a>						
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <table class="table table-striped table-hover">
-                                      <thead>
-                                        <tr>
-                                          <th>Nombre</th>
-                                          <th>Email</th>
-                                          <th>Dirección</th>
-                                          <th>Teléfono</th>
-                                          <th>Acciones</th>
-                                        </tr>
-                                      </thead>
-                                      <tbody>
-                                        <tr>
-                                          <td>Thomas Hardy</td>
-                                          <td>thomashardy@mail.com</td>
-                                          <td>89 Chiaroscuro Rd, Portland, USA</td>
-                                          <td>(171) 555-2222</td>
-                                          <td>
-                                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                                          </td>
-                                        </tr>
-                                        <tr>
-                                          <td>Dominique Perrier</td>
-                                          <td>dominiqueperrier@mail.com</td>
-                                          <td>Obere Str. 57, Berlin, Germany</td>
-                                          <td>(313) 555-5735</td>
-                                          <td>
-                                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                                          </td>
-                                        </tr>
-                                        <tr>
-                                          <td>Maria Anders</td>
-                                          <td>mariaanders@mail.com</td>
-                                          <td>25, rue Lauriston, Paris, France</td>
-                                          <td>(503) 555-9931</td>
-                                          <td>
-                                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                                          </td>
-                                        </tr>
-                                        <tr>
-                                          <td>Fran Wilson</td>
-                                          <td>franwilson@mail.com</td>
-                                          <td>C/ Araquil, 67, Madrid, Spain</td>
-                                          <td>(204) 619-5731</td>
-                                          <td>
-                                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                                          </td>
-                                        </tr>					
-                                        <tr>
-                                          <td>Martin Blank</td>
-                                          <td>martinblank@mail.com</td>
-                                          <td>Via Monte Bianco 34, Turin, Italy</td>
-                                          <td>(480) 631-2097</td>
-                                          <td>
-                                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                                          </td>
-                                        </tr> 
-                                      </tbody>
-                                    </table>
-                                    <div class="clearfix">
-                                      <div class="hint-text">Mostrando <b>5</b> fuera de <b>25</b> entradas.</div>
-                                      <ul class="pagination">
-                                        <li class="page-item disabled"><a href="#">Anterior</a></li>
-                                        <li class="page-item"><a href="#" class="page-link">1</a></li>
-                                        <li class="page-item"><a href="#" class="page-link">2</a></li>
-                                        <li class="page-item active"><a href="#" class="page-link">3</a></li>
-                                        <li class="page-item"><a href="#" class="page-link">4</a></li>
-                                        <li class="page-item"><a href="#" class="page-link">5</a></li>
-                                        <li class="page-item"><a href="#" class="page-link">Siguiente</a></li>
-                                      </ul>
-                                    </div>
-                                  </div>
-                                </div>        
+                              <div class="card" style="width: 18rem;">
+                                <img src="..." class="card-img-top" alt="...">
+                                <div class="card-body">
+                                  <h5 class="card-title">Card title</h5>
+                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  <a href="#" class="btn btn-primary">Go somewhere</a>
                                 </div>
-                              <!-- Edit Modal HTML -->
-                              <div id="addEmployeeModal" class="modal fade">
-                                <div class="modal-dialog">
-                                  <div class="modal-content">
-                                    <form>
-                                      <div class="modal-header">						
-                                        <h4 class="modal-title">Añadir Proveedor</h4>
-                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                      </div>
-                                      <div class="modal-body">					
-                                        <div class="form-group">
-                                          <label>Nombre</label>
-                                          <input type="text" class="form-control" required>
-                                        </div>
-                                        <div class="form-group">
-                                          <label>Email</label>
-                                          <input type="email" class="form-control" required>
-                                        </div>
-                                        <div class="form-group">
-                                          <label>Dirección</label>
-                                          <textarea class="form-control" required></textarea>
-                                        </div>
-                                        <div class="form-group">
-                                          <label>Teléfono</label>
-                                          <input type="text" class="form-control" required>
-                                        </div>					
-                                      </div>
-                                      <div class="modal-footer">
-                                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
-                                        <input type="submit" class="btn btn-success" value="Añadir">
-                                      </div>
-                                    </form>
-                                  </div>
-                                </div>
-                              </div>
-                              <!-- Edit Modal HTML -->
-                              <div id="editEmployeeModal" class="modal fade">
-                                <div class="modal-dialog">
-                                  <div class="modal-content">
-                                    <form>
-                                      <div class="modal-header">						
-                                        <h4 class="modal-title">Editar Proveedor</h4>
-                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                      </div>
-                                      <div class="modal-body">					
-                                        <div class="form-group">
-                                          <label>Nombre</label>
-                                          <input type="text" class="form-control" required>
-                                        </div>
-                                        <div class="form-group">
-                                          <label>Email</label>
-                                          <input type="email" class="form-control" required>
-                                        </div>
-                                        <div class="form-group">
-                                          <label>Dirección</label>
-                                          <textarea class="form-control" required></textarea>
-                                        </div>
-                                        <div class="form-group">
-                                          <label>Teléfono</label>
-                                          <input type="text" class="form-control" required>
-                                        </div>					
-                                      </div>
-                                      <div class="modal-footer">
-                                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                                        <input type="submit" class="btn btn-info" value="Save">
-                                      </div>
-                                    </form>
-                                  </div>
-                                </div>
-                              </div>
-                              <!-- Delete Modal HTML -->
-                              <div id="deleteEmployeeModal" class="modal fade">
-                                <div class="modal-dialog">
-                                  <div class="modal-content">
-                                    <form>
-                                      <div class="modal-header">						
-                                        <h4 class="modal-title">Eliminar Proveedor</h4>
-                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                      </div>
-                                      <div class="modal-body">					
-                                        <p>Estás seguro que deseas eliminar estos registros?</p>
-                                        <p class="text-warning"><small>Esta acción no se podrá revertir</small></p>
-                                      </div>
-                                      <div class="modal-footer">
-                                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
-                                        <input type="submit" class="btn btn-danger" value="Eliminar">
-                                      </div>
-                                    </form>
-                                  </div>
-                                </div>
-                              </div>
+                              </div>                              
 		                          <!--Fin Contenido-->
                            </div>
-                        </div>
+                           <div class="col-md-4">
+		                          <!--Contenido-->
+                              <div class="card" style="width: 18rem;">
+                                <img src="..." class="card-img-top" alt="...">
+                                <div class="card-body">
+                                  <h5 class="card-title">Card title</h5>
+                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                              </div>                              
+		                          <!--Fin Contenido-->
+                           </div>
+
+                           <div class="col-md-4">
+		                          <!--Contenido-->
+                              <div class="card" style="width: 18rem;">
+                                <img src="..." class="card-img-top" alt="...">
+                                <div class="card-body">
+                                  <h5 class="card-title">Card title</h5>
+                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                              </div>                              
+		                          <!--Fin Contenido-->
+                           </div>
+                        </div>                      
 		                    
                   		</div>
                   	</div><!-- /.row -->

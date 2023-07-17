@@ -39,6 +39,32 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+        // Activate tooltip
+        $('[data-toggle="tooltip"]').tooltip();
+        
+        // Select/Deselect checkboxes
+        var checkbox = $('table tbody input[type="checkbox"]');
+        $("#selectAll").click(function(){
+          if(this.checked){
+            checkbox.each(function(){
+              this.checked = true;                        
+            });
+          } else{
+            checkbox.each(function(){
+              this.checked = false;                        
+            });
+          } 
+        });
+        checkbox.click(function(){
+          if(!this.checked){
+            $("#selectAll").prop("checked", false);
+          }
+        });
+      });
+      </script>
       
   </head>
   <body class="hold-transition skin-blue sidebar-mini">
@@ -187,7 +213,7 @@
             <div class="col-md-12">
               <div class="box">
                 <div class="box-header with-border">
-                  <h3 class="box-title">Proveedores</h3>
+                  <h3 class="box-title">Productos</h3>
                   <div class="box-tools pull-right">
                     <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
                     
@@ -205,10 +231,11 @@
                                     <div class="table-title">
                                       <div class="row">
                                         <div class="col-xs-6">
-                                          <h2>Administrar <b>Proveedores</b></h2>
+                                          <h2>Administrar <b>Productos</b></h2>
                                         </div>
                                         <div class="col-xs-6">
-                                          <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons" style="font-size: 15px;">&#xE147;</i> <span>Añadir nuevo proveedor</span></a>		
+                                          <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons" style="font-size: 15px;">&#xE147;</i> <span>Añadir nuevo proveedor</span></a>
+                                          <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons" style="font-size: 15px;">&#xE15C;</i> <span>Borrar</span></a>						
                                         </div>
                                       </div>
                                     </div>
@@ -216,10 +243,10 @@
                                       <thead>
                                         <tr>
                                           <th>Nombre</th>
-                                          <th>Email</th>
-                                          <th>RUC</th>
-                                          <th>Dirección</th>
-                                          <th>Teléfono</th>
+                                          <th>Descripción</th>
+                                          <th>Precio</th>
+                                          <th>Cantidad</th>
+                                          <th>Categoria</th>
                                           <th>Acciones</th>
                                         </tr>
                                       </thead>
@@ -230,16 +257,14 @@
                                         <tr>
                                           <td><?php echo $row['nombres'] ?></td>
                                           <td><?php echo $row['email'] ?></td>
-                                          <td><?php echo $row['ruc'] ?></td>
                                           <td><?php echo $row['direccion'] ?></td>
                                           <td><?php echo $row['telefono'] ?></td>
+                                          <td><?php echo $row['telefono'] ?></td>
                                           <td>
-                                            <a href="#editEmployeeModal<?php echo $row['id_provedores'] ?>" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                                            <a href="#deleteEmployeeModal<?php echo $row['id_provedores'] ?>" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                                           </td>
                                         </tr> 
-                                        <?php include("modal_editar_provedor.php") ?>
-                                        <?php include("modal_eliminar_provedor.php") ?>
                                         <?php
                                           }
                                         ?>
@@ -250,32 +275,32 @@
                               <div id="addEmployeeModal" class="modal fade">
                                 <div class="modal-dialog">
                                   <div class="modal-content">
-                                    <form action="agregar_provedor.php" method="POST">
+                                    <form>
                                       <div class="modal-header">						
-                                        <h4 class="modal-title">Añadir Proveedor</h4>
+                                        <h4 class="modal-title">Añadir Producto</h4>
                                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                                       </div>
                                       <div class="modal-body">					
                                         <div class="form-group">
                                           <label>Nombre</label>
-                                          <input type="text" class="form-control" name="nombres" required>
+                                          <input type="text" class="form-control">
                                         </div>
                                         <div class="form-group">
-                                          <label>Email</label>
-                                          <input type="email" class="form-control" name="email" required>
+                                          <label>Descripción</label>
+                                          <textarea class="form-control"></textarea>
                                         </div>
                                         <div class="form-group">
-                                          <label>Dirección</label>
-                                          <textarea class="form-control" name="direccion" required></textarea>
+                                          <label>Precio</label>
+                                          <input type="number" class="form-control">
                                         </div>
                                         <div class="form-group">
-                                          <label>Teléfono</label>
-                                          <input type="text" name="telefono" class="form-control" required>
-                                        </div>		
+                                          <label>Cantidad</label>
+                                          <input type="number" class="form-control">
+                                        </div>
                                         <div class="form-group">
-                                          <label>RUC</label>
-                                          <input type="text" name="Ruc" class="form-control" required>
-                                        </div>				
+                                          <label>Categoría</label>
+                                          <input type="text" class="form-control">
+                                        </div>					
                                       </div>
                                       <div class="modal-footer">
                                         <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
@@ -285,32 +310,36 @@
                                   </div>
                                 </div>
                               </div>
-                              <!-- Edit Modal HTML 
+                              <!-- Edit Modal HTML -->
                               <div id="editEmployeeModal" class="modal fade">
                                 <div class="modal-dialog">
                                   <div class="modal-content">
                                     <form>
                                       <div class="modal-header">						
-                                        <h4 class="modal-title">Editar Proveedor</h4>
+                                        <h4 class="modal-title">Editar Producto</h4>
                                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                                       </div>
                                       <div class="modal-body">					
-                                        <div class="form-group">
+                                      <div class="form-group">
                                           <label>Nombre</label>
-                                          <input type="text" class="form-control" required>
+                                          <input type="text" class="form-control">
                                         </div>
                                         <div class="form-group">
-                                          <label>Email</label>
-                                          <input type="email" class="form-control" required>
+                                          <label>Descripción</label>
+                                          <textarea class="form-control"></textarea>
                                         </div>
                                         <div class="form-group">
-                                          <label>Dirección</label>
-                                          <textarea class="form-control" required></textarea>
+                                          <label>Precio</label>
+                                          <input type="number" class="form-control">
                                         </div>
                                         <div class="form-group">
-                                          <label>Teléfono</label>
-                                          <input type="text" class="form-control" required>
-                                        </div>					
+                                          <label>Cantidad</label>
+                                          <input type="number" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                          <label>Categoría</label>
+                                          <input type="text" class="form-control">
+                                        </div>				
                                       </div>
                                       <div class="modal-footer">
                                         <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
@@ -319,14 +348,14 @@
                                     </form>
                                   </div>
                                 </div>
-                              </div>-->
-                              <!-- Delete Modal HTML 
+                              </div>
+                              <!-- Delete Modal HTML -->
                               <div id="deleteEmployeeModal" class="modal fade">
                                 <div class="modal-dialog">
                                   <div class="modal-content">
                                     <form>
                                       <div class="modal-header">						
-                                        <h4 class="modal-title">Eliminar Proveedor</h4>
+                                        <h4 class="modal-title">Eliminar Producto</h4>
                                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                                       </div>
                                       <div class="modal-body">					
@@ -340,7 +369,7 @@
                                     </form>
                                   </div>
                                 </div>
-                              </div>-->
+                              </div>
 		                          <!--Fin Contenido-->
                            </div>
                         </div>

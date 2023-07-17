@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
+    
     <div class="login-box">
       <img
         class="avatar"
@@ -35,7 +36,7 @@
           <input type="password" name="password" required="" />
           <label>Contraseña</label>
         </div>
-        <input type="submit" class="btn btn-outline-primary">
+        <input type="submit" class="btn btn-outline-primary" value="Ingresar" style="position: relative; display: inline-block; padding: 10px 20px; color: #808080; font-size: 16px; text-decoration: none; text-transform: uppercase; " >
       </form>
     </div>
   </body>

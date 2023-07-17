@@ -12,7 +12,7 @@
 .skin-blue .main-header .navbar .nav .open > a:focus,
 .skin-blue .main-header .navbar .nav > .active > a {
   background: rgba(0, 0, 0, 0.1);
-  color: #f6f6f6;
+  color: #cccc;
 }
 .skin-blue .main-header .navbar .sidebar-toggle {
   color: #fff;
@@ -47,7 +47,7 @@
   background-color: #4d764d;
 }
 .skin-blue .main-header li.user-header {
-  background-color: #3c8dbc;
+  background-color: #527e51 !important;
 }
 .skin-blue .content-header {
   background: transparent;
